@@ -61,4 +61,51 @@ Adapter 模式会对现有的类进行适配，生成新的类。通过该模式
 ## 相关的设计模式
 
 - Bridge 模式
+
+Adapter 模式用于连接接口不同的类，而 Bridge 模式则用于连接类的功能层次结构与实现层次结构。
+
 - Decorator 模式
+
+Adapter 模式用于填补不同接口之间的缝隙，而 Decorator 模式则是在不改变接口的前提下增加功能。
+
+## 练习题
+
+### 2-1
+
+在示例程序中生成 PrintBanner 类的实例时（[PrinterBannerWithExtend](adapter_with_extend/PrintBannerWithExtend.java)），
+采用了如下方法，即使用 Print 类型的变量（[PrintInterface](adapter_with_extend/PrintInterface.java)）来保存 PrinterBanner 实例。
+
+```java
+Print p = new PrintBanner("Hello");
+```
+
+为什么不直接使用 PrintBanner 类直接保存呢？
+
+题解：
+
+可以明确的表示**程序的意图**：并不是使用 PrintBanner 类中的方法，而是使用 Print 接口中的方法。
+
+### 2-2
+
+在 java.util.Properties 类中，可以像下面这样管理键值对：
+
+```properties
+year=2004
+month=4
+day=21
+```
+
+java.util.Properties 类提供了以下方法，可以帮助我们方便的从流中取出属性或将属性写入流中：
+
+```java
+// 从 InputStream 中取出属性集合
+void load(InputStream in) throws IOException {}
+// 向 OutputStream 写入属性集合，header 是注释文字
+void store(OutputStream out, String header) throws IOException {}
+```
+
+请使用 Adapter 模式编写一个将属性集合保存至文件中的 FileProperties 类。
+
+[练习题解 2-2](exercise_2_2)
+
+
