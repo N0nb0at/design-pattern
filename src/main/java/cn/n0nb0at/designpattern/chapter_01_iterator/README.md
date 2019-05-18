@@ -80,5 +80,18 @@ Java 的 GC 机制会自动的在不需要时清理 ConcreteIterator 占用的�
 ## 相关的设计模式
 
 - Visitor 模式
+
+Iterator 模式时从集合中一个一个取出元素进行遍历，但是并没有在 Iterator 接口中声明对取出的元素进行何种处理。
+
+Visitor 模式则是在遍历元素集合的过程中，对元素进行相同的处理。
+
+在遍历集合的过程中对元素进行固定的处理是常有的需求。Visitor 模式正是为了应对这种需求而出现的。
+在访问元素集合的过程中对元素进行相同的处理，这种模式就是 Visitor 模式。
+
 - Composite 模式
+
+Composite 模式时具有递归结构的模式，在其中使用 Iterator 模式比较困难
+
 - Factory Method 模式
+
+在 `iterator()` 方法中生成 Iterator 的实例时可能会使用 Factory Method 模式。
