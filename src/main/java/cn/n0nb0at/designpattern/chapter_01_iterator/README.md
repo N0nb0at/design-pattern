@@ -106,3 +106,5 @@ Composite 模式时具有递归结构的模式，在其中使用 Iterator 模式
 请不使用数组，而是使用 ArrayList 修改程序，确保当书的数量超过最初指定的书架容量时，也能继续向书架中添加书本。
 
 [练习题解 1-1](exercise_1_1)
+
+[测试类](/src/test/java/cn/n0nb0at/designpattern/chapter_01_iterator/IteratorTests.java)
