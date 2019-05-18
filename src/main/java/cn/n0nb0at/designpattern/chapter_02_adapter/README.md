@@ -108,4 +108,7 @@ void store(OutputStream out, String header) throws IOException {}
 
 [练习题解 2-2](exercise_2_2)
 
+[测试类](/src/test/java/cn/n0nb0at/designpattern/chapter_02_adapter/AdapterTests.java)
+
+[资源文件](/src/test/resources/chapter_02_adapter)
 
