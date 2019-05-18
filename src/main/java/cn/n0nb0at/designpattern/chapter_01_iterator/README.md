@@ -95,3 +95,12 @@ Composite 模式时具有递归结构的模式，在其中使用 Iterator 模式
 - Factory Method 模式
 
 在 `iterator()` 方法中生成 Iterator 的实例时可能会使用 Factory Method 模式。
+
+## 练习题
+
+### 1-1
+
+在示例程序中，[BookShelf](BookShelf.java) 类使用数组来承载容量。当书的数量超过最初指定的书架容量时，就无法继续想书架容添加书本了。
+请不使用数组，而是使用 ArrayList 修改程序，确保当书的数量超过最初指定的书架容量时，也能继续向书架中添加书本。
+
+[练习题解 1-1](exercise_1_1)
